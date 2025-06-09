@@ -1,0 +1,143 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.hangman {
+    position: relative;
+    width: 300px;
+    height: 200px;
+}
+
+.gallows-structure {
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.horizontal-base {
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    background-color: black;
+    height: 5px;
+    width: 100%;
+}
+
+.upright-pole {
+    background-color: black;
+    height: 100%;
+    width: 5px;
+    position: absolute;
+    left: 45px;
+}
+
+.upper-horizontal-arm {
+    width: 100px;
+    height: 5px;
+    background-color: black;
+    position: absolute;
+    left: 45px;
+}
+
+.rope {
+    position: absolute;
+    right: 55px;
+    background-color: black;
+    width: 3px;
+    height: 40px;
+}
+
+.doll-body {
+    position: absolute;
+    top: 40px;
+    left: 108px;
+    width: 70px;
+    height: 150px;
+}
+
+.head {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: transparent;
+    border: 3px solid black;
+}
+
+.torso {
+    top: 38px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    background-color: black;
+    height: 50px;
+    width: 3px;
+}
+
+.left-arm {
+    position: absolute;
+    top: 45px;
+    left: 30%;
+    transform: rotate(40deg);
+    background-color: black;
+    width: 2px;
+    height: 38px;
+}
+
+.right-arm {
+    position: absolute;
+    top: 45px;
+    right: 30%;
+    transform: rotate(140deg);
+    background-color: black;
+    width: 2px;
+    height: 38px;
+}
+
+.left-leg {
+    position: absolute;
+    top: 80px;
+    left: 30%;
+    transform: rotate(40deg);
+    background-color: black;
+    width: 2px;
+    height: 40px;
+}
+
+.right-leg {
+    position: absolute;
+    top: 80px;
+    right: 30%;
+    transform: rotate(140deg);
+    background-color: black;
+    width: 2px;
+    height: 40px;
+}
+
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.first-line-keyboard, .second-line-keyboard, .third-line-keyboard {
+    display: flex;
+    gap: 5px;
+}
+
+.first-line-keyboard button, .second-line-keyboard button, .third-line-keyboard button {
+    width: 20px;
+    height: 20px;
+}
