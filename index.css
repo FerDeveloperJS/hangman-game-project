@@ -11,9 +11,41 @@ h1 {
 }
 
 .hangman {
+    margin-top: 20px;
     position: relative;
     width: 300px;
     height: 200px;
+}
+
+.play-game-button {
+    color: #fff;
+    font-weight: bolder;
+    padding: 5px;
+    width: 50px;
+    height: 30px;
+    background-color: rgb(73, 95, 95);
+    font-size: 1rem;
+    border-radius: 10px;
+}
+
+h3 {
+    font-size: .9rem;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(55, 154, 154);
+}
+
+.category {
+    display: none;
+    gap: 5px;
+}
+
+.word-category-title {
+    color: #fff;
+    font-size: .9rem;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(148, 69, 79); 
 }
 
 .gallows-structure {
@@ -126,8 +158,28 @@ h1 {
     height: 40px;
 }
 
+.letter-spaces {
+    margin-top: 30px;
+    display: none;
+    gap: 5px;
+}
+
+.letter-space {
+    position: relative;
+    background-color: black;
+    width: 25px;
+    height: 3px;
+}
+
+.letter {
+    position: absolute;
+    top: -30px;
+    left: 9px;
+    display: none;
+}
+
 .keyboard {
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 5px;
 }
