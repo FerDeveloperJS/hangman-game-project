@@ -29,7 +29,7 @@ h1 {
 }
 
 h3 {
-    font-size: .9rem;
+    font-size: .7rem;
     padding: 5px;
     border-radius: 10px;
     background-color: rgb(55, 154, 154);
@@ -42,7 +42,7 @@ h3 {
 
 .word-category-title {
     color: #fff;
-    font-size: .9rem;
+    font-size: .7rem;
     padding: 5px;
     border-radius: 10px;
     background-color: rgb(148, 69, 79); 

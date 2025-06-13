@@ -3,12 +3,14 @@ import { getRandomNumber } from "./utils/getRandomWord.js"
 import { selectRandomWordFromArray } from "./utils/getRandomWord.js"
 
 let word;
+let attempts = 0;
 
 const playGameButton = document.querySelector(".play-game-button")
 
 playGameButton.addEventListener("click", () => {
     const hangmanGameH1 = document.querySelector("h1")
     const dollBody = document.querySelector(".doll-body")
+    const dollBodyParts = dollBody.querySelectorAll("div")
     const rope = document.querySelector(".rope")
     const keyboard = document.querySelector(".keyboard")
     const letterSpaces = document.querySelector(".letter-spaces")
@@ -16,7 +18,9 @@ playGameButton.addEventListener("click", () => {
     const wordCategoryTitle = document.querySelector(".word-category-title")
 
     hangmanGameH1.style.display = "none"
-    dollBody.style.display = "none" 
+    dollBodyParts.forEach(part => {
+        part.style.display = "none"
+    })
     rope.style.display = "none"
     letterSpaces.style.display = "flex"
     keyboard.style.display = "flex"
@@ -29,7 +33,6 @@ playGameButton.addEventListener("click", () => {
     word = randomWord.word
     const category = randomWord.category
     
-    console.log(word)
 
     wordCategoryTitle.innerText = category
 
@@ -62,7 +65,60 @@ formKeyboardLetterPressed.addEventListener("submit", (event) => {
                     letter.style.display = "block"
                 }
             })
+
+            keyboardButton.style.backgroundColor = "green"
+            keyboardButton.style.pointerEvents = "none"
+            return
         }
+
     }
+
+    keyboardButton.style.backgroundColor = "red"
+    keyboardButton.style.pointerEvents = "none"
+
+    attempts += 1
+
+    if (attempts === 1) {
+        const rope = document.querySelector(".rope")
+        rope.style.display = "block"
+    }
+
+    else if (attempts === 2) {
+        const head = document.querySelector(".head")
+        head.style.display = "block"
+    }
+
+    else if (attempts === 3) {
+        const torso = document.querySelector(".torso")
+        torso.style.display = "block"
+    }
+
+    else if (attempts === 4) {
+        const leftArm = document.querySelector(".left-arm")
+        leftArm.style.display = "block"
+    }
+
+    else if (attempts === 5) {
+        const rightArm = document.querySelector(".right-arm")
+        rightArm.style.display = "block"
+    }
+
+    else if (attempts === 6) {
+        const leftLeg = document.querySelector(".left-leg")
+        leftLeg.style.display = "block"
+    }
+
+    else {
+        const rightLeg = document.querySelector(".right-leg")
+        const keyboard = document.querySelector(".keyboard")
+        const keyboardButtons = keyboard.querySelectorAll("button")
+        keyboardButtons.forEach(button => {
+            button.style.pointerEvents = "none"
+        })
+        rightLeg.style.display = "block"
+        setTimeout(() => {
+            alert("AHORCADO !!!")
+        }, 900)
     
+    }
 })
