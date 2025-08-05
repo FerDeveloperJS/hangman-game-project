@@ -21,15 +21,14 @@ h1 {
     color: #fff;
     font-weight: bolder;
     padding: 5px;
-    width: 50px;
-    height: 30px;
+    width: fit-content;
     background-color: rgb(73, 95, 95);
-    font-size: 1rem;
-    border-radius: 10px;
+    font-size: 2rem;
+    border-radius: 20px;
 }
 
 h3 {
-    font-size: .7rem;
+    font-size: 1.2rem;
     padding: 5px;
     border-radius: 10px;
     background-color: rgb(55, 154, 154);
@@ -42,7 +41,7 @@ h3 {
 
 .word-category-title {
     color: #fff;
-    font-size: .7rem;
+    font-size: 1.2rem;
     padding: 5px;
     border-radius: 10px;
     background-color: rgb(148, 69, 79); 
@@ -162,6 +161,7 @@ h3 {
     margin-top: 30px;
     display: none;
     gap: 5px;
+    font-size: 1.5rem;
 }
 
 .letter-space {
@@ -184,12 +184,23 @@ h3 {
     gap: 5px;
 }
 
+#keyboard-letter-pressed {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .first-line-keyboard, .second-line-keyboard, .third-line-keyboard {
     display: flex;
-    gap: 5px;
+    gap: 10px;
 }
 
 .first-line-keyboard button, .second-line-keyboard button, .third-line-keyboard button {
-    width: 20px;
-    height: 20px;
+    font-size: 2rem;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
 }

@@ -1,6 +1,7 @@
 import { words } from "./words.js"
 import { getRandomNumber } from "./utils/getRandomWord.js"
 import { selectRandomWordFromArray } from "./utils/getRandomWord.js"
+import { verifyVictory } from "./utils/verifyVictory.js"
 
 let word;
 let attempts = 0;
@@ -66,6 +67,10 @@ formKeyboardLetterPressed.addEventListener("submit", (event) => {
                 }
             })
 
+
+            verifyVictory(letters)
+
+
             keyboardButton.style.backgroundColor = "green"
             keyboardButton.style.pointerEvents = "none"
             return
@@ -73,8 +78,12 @@ formKeyboardLetterPressed.addEventListener("submit", (event) => {
 
     }
 
+
+
     keyboardButton.style.backgroundColor = "red"
     keyboardButton.style.pointerEvents = "none"
+    
+
 
     attempts += 1
 
