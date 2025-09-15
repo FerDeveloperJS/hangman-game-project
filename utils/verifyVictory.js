@@ -10,8 +10,11 @@ export function verifyVictory(everyLetter) {
             button.style.pointerEvents = "none"
         })
 
+        const playAgainButton = document.querySelector(".play-again-button")
+        playAgainButton.style.display = "block"
+
         setTimeout(() => {
             alert("ADIVINASTE !!!")
-        }, 900)
+        }, 500)
     }
 }
