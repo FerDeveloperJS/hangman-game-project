@@ -108,14 +108,14 @@ formKeyboardLetterPressed.addEventListener("submit", (event) => {
     });
     rightLeg.style.display = "block";
 
-    const playAgainButton = document.querySelector(".play-again-button");
-    playAgainButton.style.display = "block";
-    playAgainButton.addEventListener("click", () => {
-      location.reload();
-    });
-
     setTimeout(() => {
       alert("AHORCADO !!!");
     }, 500);
   }
+
+  const playAgainButton = document.querySelector(".play-again-button");
+  playAgainButton.style.display = "block";
+  playAgainButton.addEventListener("click", () => {
+    location.reload();
+  });
 });
