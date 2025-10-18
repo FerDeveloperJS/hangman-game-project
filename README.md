@@ -8,13 +8,24 @@ El clásico juego del ahorcado, desarrollado como proyecto web. El objetivo del 
 - Se revela una parte del muñeco por cada error del jugador.
 - Teclado en pantalla para ir seleccionando las letras.
 
+## 📸 Screenshots
+
+### Partida Ganada
+
+![GameWon](./screenshots/game_won.png)
+
+### Partida Perdida
+
+![LostGame](./screenshots/lost_game.png)
+![LostGame_2](./screenshots/lost_game_2.png)
+
 ## ⚙️ Instalación
 
 1. Clona el repositorio.
 2. Abre el archivo index.html en tu navegador.
-    - Recomendado: utiliza **Live Server** si usas VS Code.
+   - Recomendado: utiliza **Live Server** si usas VS Code.
 
-## ▶️ Uso 
+## ▶️ Uso
 
 1. Al abrir el juego, verás la estructura del ahorcado vacía.
 2. Comienza a adivinar letras.
